@@ -85,4 +85,7 @@ var finances = [
     ['Dec-2016', 60988],
     ['Jan-2017', 138230],
     ['Feb-2017', 671099]
-    ];
+    ]; //nested arrays
+
+    var totalMonths = finances.length // work out amount of months
+    console.log(`Total months: ${totalMonths}`) // console to print amount of months
