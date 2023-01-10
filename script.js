@@ -87,18 +87,34 @@ var finances = [
     ['Feb-2017', 671099]
     ]; //nested arrays
 
+    var averageArray = []
     var totalMonths = finances.length // work out amount of months
-   // make a average array 
-     // make a total amount array
-    // make a array for the max and the minimum amount
+    var amountArray = finances.map((val)=> val[1]);// makes new amount array
+    var totalAmount = amountArray.reduce((acc, curent) => acc + curent, 0);
+    var max = Math.max(...amountArray); // work out the maximum made
+    var min = Math.min(...amountArray); // work out the minimum made 
+    const maxIndex = amountArray.indexOf(max);
+    const minIndex = amountArray.indexOf(min);
+    // variables and const above assigned
+    for (let i = 0; i < amountArray.length; i++) {
+      if(amountArray[i + 1]){
+          averageArray.push(amountArray[i + 1] - amountArray[i]);
+      }
+  }// for loop
 
+
+  var average = averageArray.reduce((acc, curent) => acc + curent, 0);
 
 
 
     //the console output 
 
-    console.log("Financial Analysis")
-    console.log("----------------------------------------------")
+    console.log(`Financial Analysis`)
+    console.log(`----------------------------------------------`)
     console.log(`Total months: ${totalMonths}`)
+    console.log(`Total Amount: ${totalAmount}`);
+    console.log(`Average Change: $${average / averageArray.length.toFixed(2)}`);
+    console.log(`Greatest Increase in Profits:  (${finances[maxIndex][0]} $${finances[maxIndex][1]}) `);
+    console.log(`Greatest Decrease in Profits:  (${finances[minIndex][0]} $${finances[minIndex][1]}) `);
     
     
