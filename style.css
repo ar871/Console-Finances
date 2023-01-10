@@ -1,4 +1,9 @@
-h1{
-    text-align: center;
-    color: blue;
+
+div{
+    border: 1px solid;
+    padding: 20px;
+    margin: 25px;
+    background-color: bisque;
+
+    
 }

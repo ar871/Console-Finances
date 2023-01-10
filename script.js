@@ -91,8 +91,8 @@ var finances = [
     var totalMonths = finances.length // work out amount of months
     var amountArray = finances.map((val)=> val[1]);// makes new amount array
     var totalAmount = amountArray.reduce((acc, curent) => acc + curent, 0);
-    var max = Math.max(...amountArray); // work out the maximum made
-    var min = Math.min(...amountArray); // work out the minimum made 
+    var max = Math.max(...amountArray); // 
+    var min = Math.min(...amountArray); // 
     const maxIndex = amountArray.indexOf(max);
     const minIndex = amountArray.indexOf(min);
     // variables and const above assigned
@@ -113,8 +113,17 @@ var finances = [
     console.log(`----------------------------------------------`)
     console.log(`Total months: ${totalMonths}`)
     console.log(`Total Amount: ${totalAmount}`);
-    console.log(`Average Change: $${average / averageArray.length.toFixed(2)}`);
-    console.log(`Greatest Increase in Profits:  (${finances[maxIndex][0]} $${finances[maxIndex][1]}) `);
-    console.log(`Greatest Decrease in Profits:  (${finances[minIndex][0]} $${finances[minIndex][1]}) `);
+    console.log(`Average Change: $${(average / averageArray.length).toFixed(2)}`);
+    console.log(`Greatest Increase in Profits: (${finances[maxIndex][0]} $${finances[maxIndex][1]}) `);
+    console.log(`Greatest Decrease in Profits: (${finances[minIndex][0]} $${finances[minIndex][1]}) `);
     
-    
+    // below will produce on html 
+    document.getElementById("fA").innerHTML ="Financial Analysis"
+    document.getElementById("l").innerHTML ="-----------------------------------------------------------"
+    document.getElementById("tM").innerHTML =`Total Month : ${totalMonths}`
+    document.getElementById("t").innerHTML =`Total : $ ${totalAmount}`
+    document.getElementById("aC").innerHTML =`Average Change: $ ${(average / averageArray.length).toFixed(2)}`
+    document.getElementById("gIIP").innerHTML =`Greatest Increase in Profits: (${finances[maxIndex][0]} $ ${finances[maxIndex][1]})`
+    document.getElementById("gDIP").innerHTML =`Greatest Decrease in Profits: (${finances[minIndex][0]} $ ${finances[minIndex][1]})`
+
+//this will print in html and on browser
