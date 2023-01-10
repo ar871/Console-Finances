@@ -88,4 +88,17 @@ var finances = [
     ]; //nested arrays
 
     var totalMonths = finances.length // work out amount of months
-    console.log(`Total months: ${totalMonths}`) // console to print amount of months
+   // make a average array 
+     // make a total amount array
+    // make a array for the max and the minimum amount
+
+
+
+
+    //the console output 
+
+    console.log("Financial Analysis")
+    console.log("----------------------------------------------")
+    console.log(`Total months: ${totalMonths}`)
+    
+    
